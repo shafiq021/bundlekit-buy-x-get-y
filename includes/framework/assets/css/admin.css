@@ -1,0 +1,11 @@
+/* BundleKit admin — loaded ONLY on the BundleKit admin page. */
+.bundlekit-tabs { margin-bottom: 0; }
+.bundlekit-wrap .button-primary {
+	background: var(--bundlekit-primary);
+	border-color: var(--bundlekit-primary);
+}
+.bundlekit-wrap .button-primary:hover,
+.bundlekit-wrap .button-primary:focus {
+	background: var(--bundlekit-primary-hover);
+	border-color: var(--bundlekit-primary-hover);
+}

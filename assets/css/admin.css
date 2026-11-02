@@ -1,0 +1,65 @@
+/* BundleKit – Buy X Get Y — admin (Offers tab). */
+.bxgy-offer-card { margin-bottom: 16px; }
+.bxgy-offer-head { display: flex; align-items: center; gap: 10px; }
+.bxgy-offer-head > div { flex: 1; }
+.bxgy-offer-remove {
+	font-size: 20px;
+	line-height: 1;
+	padding: 2px 10px;
+	color: #b91c1c;
+}
+.bxgy-offer-title { margin: 0; font-size: 15px; }
+.bxgy-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+	gap: 0 16px;
+	margin-bottom: 8px;
+}
+.bxgy-section-title {
+	margin: 14px 0 6px;
+	font-size: 13px;
+	text-transform: uppercase;
+	letter-spacing: .04em;
+	color: #4b5563;
+	border-top: 1px solid #e5e7eb;
+	padding-top: 12px;
+}
+.bxgy-product-picker { margin: 6px 0 10px; }
+.bxgy-product-results {
+	border: 1px solid #d1d5db;
+	border-top: 0;
+	max-height: 180px;
+	overflow: auto;
+	background: #fff;
+}
+.bxgy-product-results button {
+	display: block;
+	width: 100%;
+	text-align: left;
+	background: none;
+	border: 0;
+	padding: 8px 10px;
+	cursor: pointer;
+}
+.bxgy-product-results button:hover { background: #f3f4f6; }
+.bxgy-product-selected { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.bxgy-chip {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	background: #eef2ff;
+	border: 1px solid #c7d2fe;
+	border-radius: 999px;
+	padding: 3px 6px 3px 12px;
+	font-size: 12px;
+}
+.bxgy-chip button {
+	background: none;
+	border: 0;
+	cursor: pointer;
+	font-size: 14px;
+	line-height: 1;
+	color: #4f46e5;
+}
+.bxgy-terms { width: 100%; max-width: 480px; }
+[data-offer-dates] .bk-input { width: auto; }

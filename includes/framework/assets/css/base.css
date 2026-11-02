@@ -1,0 +1,51 @@
+/* BundleKit design tokens — tiny shared base, loaded only on BundleKit admin pages.
+   Add-ons use these variables/classes in their OWN files, so a client who
+   installs only one add-on never loads another add-on's CSS/JS. */
+:root {
+	--bundlekit-primary: #5762d3;
+	--bundlekit-primary-hover: #454da5;
+	--bundlekit-text: #1f2937;
+	--bundlekit-muted: #6b7280;
+	--bundlekit-border: #e5e7eb;
+	--bundlekit-bg: #f5f5f7;
+	--bundlekit-card-bg: #ffffff;
+	--bundlekit-radius: 12px;
+	--bundlekit-success: #15803d;
+}
+.bundlekit-wrap { max-width: 960px; }
+.bundlekit-version {
+	font-size: 13px; color: var(--bundlekit-muted); font-weight: 400;
+	vertical-align: middle;
+}
+.bundlekit-tagline { color: var(--bundlekit-muted); margin-top: 0; }
+.bundlekit-card {
+	background: var(--bundlekit-card-bg);
+	border: 1px solid var(--bundlekit-border);
+	border-radius: var(--bundlekit-radius);
+	padding: 20px 24px;
+	margin: 20px 0;
+}
+.bundlekit-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+	gap: 16px;
+	margin-top: 16px;
+}
+.bundlekit-plugin-card {
+	border: 1px solid var(--bundlekit-border);
+	border-radius: var(--bundlekit-radius);
+	padding: 16px;
+	background: var(--bundlekit-card-bg);
+}
+.bundlekit-plugin-card h3 { margin-top: 0; }
+.bundlekit-badge {
+	display: inline-block;
+	background: var(--bundlekit-bg);
+	color: var(--bundlekit-text);
+	border-radius: 999px;
+	padding: 2px 10px;
+	font-size: 12px;
+}
+.bundlekit-badge-active { background: #dcfce7; color: var(--bundlekit-success); }
+.bundlekit-addon-list { list-style: disc; margin-left: 20px; }
+.bundlekit-install-status { margin-left: 8px; color: var(--bundlekit-muted); }

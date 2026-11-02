@@ -1,0 +1,151 @@
+/* BundleKit – Buy X Get Y — frontend widget styles.
+ * All sizing/colors come from --bxgy-* custom properties printed on
+ * the widget wrapper (see Frontend::style_attr()). Show/hide is
+ * class-based (.bxgy-no-*) — never display:var(...). */
+
+.bundlekit-bogo {
+	font-family: var(--bxgy-base-font, inherit);
+	margin-top: var(--bxgy-margin-top, 0);
+	margin-bottom: var(--bxgy-margin-bottom, 12px);
+	max-width: var(--bxgy-widget-max-width, none);
+	box-sizing: border-box;
+}
+.bundlekit-bogo * { box-sizing: border-box; }
+
+/* ============ Offer banner ============ */
+.bxgy-banner {
+	display: flex;
+	gap: 10px;
+	align-items: flex-start;
+	background: var(--bxgy-banner-bg, #f0fdf4);
+	border: 1px solid var(--bxgy-banner-border-color, #bbf7d0);
+	border-radius: var(--bxgy-banner-radius, 8px);
+	padding: var(--bxgy-banner-padding, 12px);
+}
+.bxgy-banner-icon { font-size: 22px; line-height: 1.2; flex: 0 0 auto; }
+.bxgy-banner-text { display: flex; flex-direction: column; gap: 2px; }
+.bxgy-banner-headline {
+	font-size: var(--bxgy-banner-headline-size, 15px);
+	font-weight: var(--bxgy-banner-headline-weight, 700);
+	color: var(--bxgy-banner-headline-color, #14532d);
+	line-height: 1.35;
+}
+.bxgy-banner-sub {
+	font-size: var(--bxgy-banner-sub-size, 13px);
+	color: var(--bxgy-banner-sub-color, #166534);
+}
+
+/* ============ Progress bar ============ */
+.bxgy-progress { display: flex; flex-direction: column; gap: 6px; }
+.bxgy-progress-text {
+	font-size: var(--bxgy-progress-text-size, 13px);
+	color: var(--bxgy-progress-text-color, #374151);
+}
+.bxgy-progress-track {
+	height: var(--bxgy-progress-height, 8px);
+	background: var(--bxgy-progress-track-bg, #e5e7eb);
+	border-radius: var(--bxgy-progress-radius, 999px);
+	overflow: hidden;
+}
+.bxgy-progress-fill {
+	height: 100%;
+	background: var(--bxgy-progress-fill-bg, #16a34a);
+	border-radius: inherit;
+	transition: width .3s ease;
+}
+
+/* ============ Gift picker ============ */
+.bxgy-picker {
+	background: var(--bxgy-picker-bg, #ffffff);
+	border: 1px solid var(--bxgy-picker-border-color, #e5e7eb);
+	border-radius: var(--bxgy-picker-radius, 8px);
+	padding: 14px;
+	color: var(--bxgy-picker-text-color, #111827);
+}
+.bxgy-picker--compact { padding: 10px; font-size: 13px; }
+.bxgy-picker-head { display: flex; gap: 10px; align-items: center; margin-bottom: 10px; }
+.bxgy-picker-icon { font-size: 24px; }
+.bxgy-picker-head > div { display: flex; flex-direction: column; }
+.bxgy-picker-title { font-size: 15px; font-weight: 700; }
+.bxgy-picker-offer { font-size: 12px; opacity: .7; }
+.bxgy-picker-body { display: flex; flex-direction: column; gap: 8px; }
+.bxgy-picker-product { font-weight: 600; }
+.bxgy-picker-variation {
+	width: 100%;
+	padding: 8px 10px;
+	border: 1px solid #d1d5db;
+	border-radius: 6px;
+	background: #fff;
+	color: inherit;
+}
+.bxgy-picker-button {
+	background: var(--bxgy-picker-button-bg, #16a34a);
+	color: var(--bxgy-picker-button-text-color, #ffffff);
+	border: 0;
+	border-radius: var(--bxgy-picker-button-radius, 6px);
+	padding: 10px 16px;
+	font-size: 14px;
+	font-weight: 600;
+	cursor: pointer;
+}
+.bxgy-picker-button:hover { filter: brightness(.94); }
+.bxgy-picker-button:disabled { opacity: .6; cursor: wait; }
+.bxgy-picker-note { font-size: 12px; min-height: 16px; }
+.bxgy-picker-launch { text-align: center; }
+
+/* Popup overlay */
+.bxgy-overlay { position: fixed; inset: 0; z-index: 99990; }
+.bxgy-overlay[hidden] { display: none; }
+.bxgy-overlay-backdrop { position: absolute; inset: 0; background: rgba(0,0,0,.5); }
+.bxgy-overlay-dialog {
+	position: absolute;
+	left: 50%; top: 50%;
+	transform: translate(-50%, -50%);
+	width: min(440px, calc(100vw - 40px));
+	max-height: calc(100vh - 60px);
+	overflow: auto;
+}
+.bxgy-overlay-close {
+	position: absolute;
+	top: 6px; right: 10px;
+	z-index: 2;
+	background: transparent;
+	border: 0;
+	font-size: 22px;
+	line-height: 1;
+	cursor: pointer;
+	color: #6b7280;
+}
+
+/* Free label on reward lines */
+.bxgy-free {
+	font-weight: 700;
+	color: var(--bxgy-reward-price-color, #16a34a);
+}
+
+/* Reward badge sample (preview) */
+.bxgy-reward-badge-sample {
+	display: inline-block;
+	background: var(--bxgy-reward-badge-bg, #16a34a);
+	color: var(--bxgy-reward-badge-text-color, #ffffff);
+	font-size: 12px;
+	font-weight: 600;
+	border-radius: 999px;
+	padding: 3px 10px;
+	margin-top: 8px;
+}
+
+/* ============ Show/hide (class-based only) ============ */
+.bxgy-no-banner .bxgy-banner,
+.bxgy-no-progress .bxgy-progress,
+.bxgy-no-picker .bxgy-picker,
+.bxgy-no-picker .bxgy-picker-launch,
+.bxgy-no-mini-cart .bxgy-picker--compact,
+.bxgy-no-reward-badge .bxgy-reward-badge-sample { display: none !important; }
+
+/* ============ Responsive ============ */
+@media (max-width: 600px) {
+	.bxgy-banner { padding: 10px; }
+	.bxgy-picker { padding: 12px; }
+	.bxgy-overlay-dialog { width: calc(100vw - 32px); }
+}
