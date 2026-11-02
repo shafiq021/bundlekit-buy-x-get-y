@@ -44,6 +44,18 @@ Create global "buy X, get Y" offers that run across your store: buy N products, 
 
 **Offer progress banner**: shows the reward and how much more is needed to unlock it.
 
+### Cart reward
+
+![Cart with auto-added reward](screenshots/cart-reward-line.png)
+
+**Cart**: the free reward line is added automatically, with the offer name and savings.
+
+### Offers admin
+
+![Offers admin screen](screenshots/offers-admin.png)
+
+**Offers**: trigger, reward, status, priority and limits — all on one screen.
+
 ## Features
 
 **Offers**
